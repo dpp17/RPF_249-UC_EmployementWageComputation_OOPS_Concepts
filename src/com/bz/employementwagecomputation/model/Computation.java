@@ -9,6 +9,7 @@ public class Computation {
 	private int partTimeWage;
 	private int presentPartTime;
 	private int presentFullTime;
+	private int wageForMonth;
 	
 	
 	public int getPresentPartTime() {
@@ -40,6 +41,12 @@ public class Computation {
 	}
 	public void setPartTimeHour(int partTimeHour) {
 		this.partTimeHour = partTimeHour;
+	}
+	public int getWageForMonth() {
+		return wageForMonth;
+	}
+	public void setWageForMonth(int wageForMonth) {
+		this.wageForMonth = wageForMonth;
 	}
 	
 
