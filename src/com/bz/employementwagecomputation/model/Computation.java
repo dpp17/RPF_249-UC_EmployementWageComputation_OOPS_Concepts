@@ -2,6 +2,9 @@ package com.bz.employementwagecomputation.model;
 
 public class Computation {
 	
+	public final int wagePerHour = 20;
+	public final int fullDayHour = 8;
+	public final int PartTimeHour = 8;
 	private int partTime;
 	private int fullTime;
 	private int partTimeWage;
