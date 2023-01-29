@@ -2,11 +2,17 @@ package com.bz.employementwagecomputation.model;
 
 public class Computation {
 	
-	float pi = 22/7;//constant
 	private int partTime;
 	private int fullTime;
 	private int partTimeWage;
+	private int present;
 	
+	public int getPresent() {
+		return present;
+	}
+	public void setPresent(int present) {
+		this.present = present;
+	}
 	public int getPartTime() {
 		return partTime;
 	}
