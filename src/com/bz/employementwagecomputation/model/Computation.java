@@ -4,20 +4,24 @@ public class Computation {
 	
 	public final int wagePerHour = 20;
 	public final int fullDayHour = 8;
-	public final int PartTimeHour = 8;
-	private int partTime;
-	private int fullTime;
+	public final int partTimeHour = 8;
+	private int fullTimeWage;
 	private int partTimeWage;
-	private int present;
+	private int presentPartTime;
+	private int presentFullTime;
 	
-	public int getPresent() {
-		return present;
+	
+	public int getPresentPartTime() {
+		return presentPartTime;
 	}
-	public void setPresent(int present) {
-		this.present = present;
+	public void setPresentPartTime(int presentPartTime) {
+		this.presentPartTime = presentPartTime;
 	}
-	public int getPartTime() {
-		return partTime;
+	public int getPresentFullTime() {
+		return presentFullTime;
+	}
+	public void setPresentFullTime(int presentFullTime) {
+		this.presentFullTime = presentFullTime;
 	}
 	public int getPartTimeWage() {
 		return partTimeWage;
@@ -25,14 +29,11 @@ public class Computation {
 	public void setPartTimeWage(int partTimeWage) {
 		this.partTimeWage = partTimeWage;
 	}
-	public void setPartTime(int partTime) {
-		this.partTime = partTime;
+	public int getFullTimeWage() {
+		return fullTimeWage;
 	}
-	public int getFullTime() {
-		return fullTime;
-	}
-	public void setFullTime(int fullTime) {
-		this.fullTime = fullTime;
+	public void setFullTimeWage(int fullTimeWage) {
+		this.fullTimeWage = fullTimeWage;
 	}
 	
 
