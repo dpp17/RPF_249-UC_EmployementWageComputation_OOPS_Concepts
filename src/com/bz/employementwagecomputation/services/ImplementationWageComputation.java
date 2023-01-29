@@ -14,6 +14,14 @@ public class ImplementationWageComputation implements IWageComputation {
 		return present;
 	}
 
+	public int dailyFullTimeEmployeeWage(int wagePerHour, int fullDayHour, int numberOfEmployees) {
+		int wagePerDay = fullDayHour * wagePerHour * numberOfEmployees;
+		return wagePerDay;
+	}
+
+
+	
+
 	
 	
 
