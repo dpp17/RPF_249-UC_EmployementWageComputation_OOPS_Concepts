@@ -19,6 +19,16 @@ public class ImplementationWageComputation implements IWageComputation {
 		return wagePerDay;
 	}
 
+	public int employeesPresentPartTime() {
+		int present = (int)(Math.random()*10+20);
+		return present;
+	}
+
+	public int dailyPartTimeEmployeeWage(int wagePerHour, int PartTimeHour, int numberOfEmployees) {
+		int wagePerDay = PartTimeHour * wagePerHour * numberOfEmployees;
+		return wagePerDay;
+	}
+
 
 	
 
