@@ -11,6 +11,7 @@ public class EmployementWageComputation {
 //		superclass name = new subclass();
 			
 		getEmployee.displayMessage();
+		System.out.println("Fill_Time Employees Present :: " + getEmployee.employeesPresentFullTime());
 		
 	}
 
