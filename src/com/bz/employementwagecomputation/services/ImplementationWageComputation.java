@@ -9,6 +9,11 @@ public class ImplementationWageComputation implements IWageComputation {
 		
 	}
 
+	public int employeesPresentFullTime() {
+		int present = (int)(Math.random()*100+1);
+		return present;
+	}
+
 	
 	
 
