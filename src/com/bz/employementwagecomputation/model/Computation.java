@@ -4,7 +4,7 @@ public class Computation {
 	
 	public final int wagePerHour = 20;
 	public final int fullDayHour = 8;
-	public final int partTimeHour = 8;
+	private int partTimeHour;
 	private int fullTimeWage;
 	private int partTimeWage;
 	private int presentPartTime;
@@ -34,6 +34,12 @@ public class Computation {
 	}
 	public void setFullTimeWage(int fullTimeWage) {
 		this.fullTimeWage = fullTimeWage;
+	}
+	public int getPartTimeHour() {
+		return partTimeHour;
+	}
+	public void setPartTimeHour(int partTimeHour) {
+		this.partTimeHour = partTimeHour;
 	}
 	
 
