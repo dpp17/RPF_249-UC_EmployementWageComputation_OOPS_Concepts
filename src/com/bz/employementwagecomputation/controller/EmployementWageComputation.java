@@ -27,7 +27,7 @@ public class EmployementWageComputation {
 		System.out.println("Part_Time Employees Present :: " + computation.getPresentPartTime() + '\n');
 
 //wage for single employee per day
-		computation.setPartTimeWage(getEmployee.dailyFullTimeEmployeeWage(computation.partTimeHour, computation.wagePerHour, 1));
+		computation.setPartTimeWage(getEmployee.dailyPartTimeEmployeeWage(computation.partTimeHour, computation.wagePerHour, 1));
 		System.out.println("EmployementWage for a Part_Timer Per Day :: " + computation.getPartTimeWage() + '\n');
 				
 	}		
