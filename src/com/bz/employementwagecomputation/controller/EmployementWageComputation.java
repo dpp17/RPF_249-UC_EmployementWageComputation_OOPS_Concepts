@@ -8,17 +8,33 @@ import com.bz.employementwagecomputation.services.ImplementationWageComputation;
 
 public class EmployementWageComputation {
 
+	public static void computeEmployeeWage(int classMethodChoice) {
+		if(classMethodChoice == 1 ) {
+			computation.setPresentFullTime(getEmployee.employeesPresentFullTime());			
+			computation.setFullTimeWage(getEmployee.dailyFullTimeEmployeeWage(computation.fullDayHour, computation.wagePerHour, computation.getPresentFullTime()));
+		}else if(classMethodChoice == 2) {
+			computation.setPresentPartTime(getEmployee.employeesPresentPartTime());
+			System.out.println("Enter number of Working Hour:: ");
+			computation.setPartTimeHour( getUserInput.nextInt());
+			computation.setPartTimeWage( getEmployee.dailyPartTimeEmployeeWage(computation.getPartTimeHour(), computation.wagePerHour, computation.getPresentPartTime()));
+		}
+	}
+	
+	
 	static Computation computation = new Computation();
+	static IWageComputation getEmployee = new ImplementationWageComputation();
+	static Scanner getUserInput = new Scanner(System.in);
+	
 	public static void main(String[] args) {
-		Scanner getUserInput = new Scanner(System.in);
 		byte option = 0;
-		IWageComputation getEmployee = new ImplementationWageComputation();
+		
 			
 //displaying welcome message
 		getEmployee.displayMessage();
 		
 		do {
-		System.out.println(" 1.FullTime Employement Wages"+'\n'+" 2.PartTime Employement Wages"+'\n'+" 3.Employement Wage For A Month :: "+'\n'+" 4.Total working days or hours reached First( Total_WorkingHour = 100 && Total_Days_In_Month )"+'\n'+" Enter option::");
+		System.out.println(" 1.FullTime Employement Wages"+'\n'+" 2.PartTime Employement Wages"+'\n'
+				+" 3.Employement Wage For A Month :: "+'\n'+" 4.Total working days or hours reached First( Total_WorkingHour = 100 && Total_Days_In_Month )"+'\n'+" 5.Use Class method to get Wage"+'\n'+" Enter option::");
 		option = getUserInput.nextByte();
 		switch(option) {
 		case 1:	
@@ -48,10 +64,15 @@ public class EmployementWageComputation {
 		case 4:
 			getEmployee.workingHoursOrDaysReachFirst(computation.fullDayHour);
 			break;
+		case 5:
+			System.out.println("Perss 1: Full Time Wage ::"+'\n'+"Perss 2: Part Time Wage ::");
+			int classMethodChoice = getUserInput.nextInt();
+			computeEmployeeWage(classMethodChoice);
+			break;
 		default:
 			System.err.println(" :: INVALID INPUT! try again :: ");
 		}
-		}while(option > 4 || option < 1);
+		}while(option > 5 || option < 1);
 		
 		System.out.println("-->>>  Thank You for Using :: Employement Wage Computation Device ::  <<<--");
 		
