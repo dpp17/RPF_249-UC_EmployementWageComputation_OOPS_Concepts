@@ -59,21 +59,16 @@ public class ImplementationWageComputation implements IWageComputation {
 	}
 
 
-
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
+	public void workingHoursOrDaysReachFirst(int timeHour) {
+		byte day =0;	
+		for(int i = 1; i <= 100; i++)
+		{	
+			if(i % timeHour == 0) {
+				 day = (byte)(day + 1);
+			}else {
+				day = (byte)(day + 0);
+			}
+		}
+		System.out.println(day < 20 ? "Total Working Hour Reached First":" Total Working Days Reached First.");
+	}
 }
