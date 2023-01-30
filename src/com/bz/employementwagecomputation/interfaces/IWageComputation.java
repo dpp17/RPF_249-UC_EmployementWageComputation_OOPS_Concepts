@@ -9,4 +9,5 @@ public interface IWageComputation {
 	 int employeesPresentPartTime();
 	 int dailyPartTimeEmployeeWage(int wagePerHour, int PartTimeHour, int numberOfEmployees);
 	 int wageForMonth(int workingDays, int wagePerHour, int TimeHour);
+	 void workingHoursOrDaysReachFirst(int timeHour);
 }
